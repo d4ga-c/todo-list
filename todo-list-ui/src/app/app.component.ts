@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HelloWorld } from './HelloWorld/helloWorld.component';
-import { Todo } from './Todo/todo.component';
-import { todos } from '../mocks/mocks.todos';
+import { HelloWorldComponent } from './HelloWorld/helloWorld.component';
+import { TodoComponent } from './Todo/todo.component';
+import { todos } from '../mocks/todos.mocks';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HelloWorld, Todo],
+  imports: [CommonModule, HelloWorldComponent, TodoComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
