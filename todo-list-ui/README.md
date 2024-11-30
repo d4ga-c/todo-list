@@ -1,3 +1,9 @@
+## Versions
+
+`Nodejs`: `v18.19.1` <br/>
+`Angular`: `v18.2.12` <br/>
+`Typescript`: `5.5.2` <br/>
+
 ## Install dependencies
 
 Run `npm install`
