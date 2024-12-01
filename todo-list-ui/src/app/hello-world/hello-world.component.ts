@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'hello-world',
-  templateUrl: './helloWorld.component.html',
+  selector: 'app-hello-world',
+  templateUrl: './hello-world.component.html',
   standalone: true,
 })
 export class HelloWorldComponent {
