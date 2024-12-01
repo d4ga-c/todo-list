@@ -1,8 +1,8 @@
 ## Versions
 
-`Nodejs`: `v18.19.1` <br/>
-`Angular`: `v18.2.12` <br/>
-`Typescript`: `5.5.2` <br/>
+1. [**Nodejs**](https://nodejs.org/docs/latest-v22.x/api/index.html): `v22.11.0`
+2. [**Angular**](https://v18.angular.dev/): `v18.2.0`
+3. [**Typescript**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html): `5.5.2`
 
 ## Install dependencies
 
@@ -10,7 +10,7 @@ Run `npm install`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. Thehttps://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HelloWorldComponent } from './HelloWorld/helloWorld.component';
-import { TodoComponent } from './Todo/todo.component';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { TodoComponent } from './todo/todo.component';
 import { todos } from '../mocks/todos.mocks';
 
 @Component({
