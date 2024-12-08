@@ -1,0 +1,11 @@
+<div>
+  <app-hello-world></app-hello-world>
+</div>
+<hr />
+<div>
+  @for (todo of todos; track todo) {
+  <app-todo [id]="todo.id" [title]="todo.title"></app-todo>
+  } @empty {
+  <p>There are no todos.</p>
+  }
+</div>
