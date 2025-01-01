@@ -1,0 +1,39 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="todo-moda-title">Add todo</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <input
+          id="inputTodo"
+          class="form-control"
+          type="text"
+          placeholder="Example: Do lunch"
+          [formControl]="inputTodo"
+          required
+        />
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!inputTodo.value"
+      (click)="add()"
+    >
+      Add
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-outline-primary my-2" (click)="open(content)">
+  Add todo
+</button>
