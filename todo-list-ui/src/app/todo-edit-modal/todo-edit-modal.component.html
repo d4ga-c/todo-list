@@ -1,0 +1,38 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="todo-edit-modal">Edit todo</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="cancel()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form id="todo-form" (ngSubmit)="editTodo()">
+      <div class="mb-3">
+        <input
+          id="inputTodo"
+          class="form-control"
+          type="text"
+          placeholder="Example: Do lunch"
+          [formControl]="inputTodo"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="submit"
+      form="todo-form"
+      class="btn btn-primary"
+      [disabled]="!inputTodo.value"
+    >
+      Edit
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-outline-primary my-2" (click)="open(content)">
+  Edit
+</button>

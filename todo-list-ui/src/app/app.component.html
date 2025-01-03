@@ -2,7 +2,11 @@
 <hr />
 <div>
   @for (todo of todos; track todo) {
-  <app-todo [id]="todo.id" [title]="todo.title"></app-todo>
+  <div>
+    <app-todo [id]="todo.id" [title]="todo.title"></app-todo>
+    <app-todo-actions [id]="todo.id" [title]="todo.title"></app-todo-actions>
+    <hr />
+  </div>
   } @empty {
   <p>There are no todos.</p>
   }
