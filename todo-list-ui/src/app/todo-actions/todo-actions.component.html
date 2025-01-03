@@ -1,0 +1,14 @@
+<app-todo-edit-modal
+  [id]="id"
+  [title]="title"
+  (newTitle)="$event ? editTodo($event) : undefined"
+></app-todo-edit-modal>
+<app-confirmation-modal
+  [message]="'Are you sure to delete this todo?'"
+  (confirmed)="$event ? removeTodo() : undefined"
+  #confirmationModal
+></app-confirmation-modal>
+
+<button class="btn btn-outline-danger" (click)="confirmationModal.open()">
+  Remove
+</button>
