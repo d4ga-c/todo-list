@@ -27,12 +27,12 @@ export class ConfirmationModalComponent {
     return this.modalInstance.result;
   }
 
-  confirm() {
+  confirm(): void {
     this.modalInstance?.close();
     this.confirmed.emit(true);
   }
 
-  cancel() {
+  cancel(): void {
     this.modalInstance?.dismiss('Cancel');
     this.confirmed.emit(false);
   }
