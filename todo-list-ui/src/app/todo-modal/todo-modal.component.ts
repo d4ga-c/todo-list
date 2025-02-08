@@ -1,11 +1,5 @@
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import {
-  Component,
-  inject,
-  signal,
-  TemplateRef,
-  WritableSignal,
-} from '@angular/core';
+import { Component, inject, TemplateRef } from '@angular/core';
 
 import {
   NgbDatepickerModule,
@@ -23,14 +17,13 @@ import { todos } from '../../mocks/todos.mocks';
 export class TodoModalComponent {
   private modalService = inject(NgbModal);
   private modalInstance?: NgbModalRef;
-  closeResult: WritableSignal<string> = signal('');
   inputTodo = new FormControl('', { nonNullable: true });
 
-  open(content: TemplateRef<any>) {
+  open(content: TemplateRef<any>): void {
     this.modalInstance = this.modalService.open(content);
   }
 
-  add() {
+  add(): void {
     const newTodo = {
       id: todos.length + 1 + '',
       title: this.inputTodo.value,
