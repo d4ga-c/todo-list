@@ -11,6 +11,7 @@
   <div class="modal-body">
     <form id="todo-form" (ngSubmit)="editTodo()">
       <div class="mb-3">
+        <label for="inputTodo">Description</label>
         <input
           id="inputTodo"
           class="form-control"
@@ -26,7 +27,7 @@
       type="submit"
       form="todo-form"
       class="btn btn-primary"
-      [disabled]="!inputTodo.value"
+      [disabled]="inputTodo.invalid"
     >
       Edit
     </button>
