@@ -26,7 +26,7 @@
     <button
       type="button"
       class="btn btn-primary"
-      [disabled]="!inputTodo.value"
+      [disabled]="inputTodo.invalid"
       (click)="add()"
     >
       Add
