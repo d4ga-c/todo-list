@@ -6,7 +6,6 @@ import {
   NgbModal,
   NgbModalRef,
 } from '@ng-bootstrap/ng-bootstrap';
-import { todos } from '../../mocks/todos.mocks';
 
 @Component({
   selector: 'app-todo-modal',
@@ -24,11 +23,6 @@ export class TodoModalComponent {
   }
 
   add(): void {
-    const newTodo = {
-      id: todos.length + 1 + '',
-      title: this.inputTodo.value,
-    };
-    todos.push(newTodo);
     this.inputTodo.setValue('');
     this.modalInstance?.close();
   }
