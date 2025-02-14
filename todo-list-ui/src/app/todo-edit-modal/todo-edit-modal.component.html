@@ -1,15 +1,15 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="todo-moda-title">Add todo</h4>
+    <h4 class="modal-title" id="todo-edit-modal">Edit todo</h4>
     <button
       type="button"
       class="btn-close"
       aria-label="Close"
-      (click)="modal.dismiss('Cross click')"
+      (click)="cancel()"
     ></button>
   </div>
   <div class="modal-body">
-    <form>
+    <form id="todo-form" (ngSubmit)="editTodo()">
       <div class="mb-3">
         <label for="inputTodo">Description</label>
         <input
@@ -18,23 +18,22 @@
           type="text"
           placeholder="Example: Do lunch"
           [formControl]="inputTodo"
-          required
         />
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button
-      type="button"
+      type="submit"
+      form="todo-form"
       class="btn btn-primary"
       [disabled]="inputTodo.invalid"
-      (click)="add()"
     >
-      Add
+      Edit
     </button>
   </div>
 </ng-template>
 
 <button class="btn btn-outline-primary my-2" (click)="open(content)">
-  Add todo
+  Edit
 </button>
