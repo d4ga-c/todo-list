@@ -1,7 +1,7 @@
 <app-todo-modal></app-todo-modal>
 <hr />
 <div>
-  @for (todo of todos; track todo) {
+  @for (todo of todos | async; track todo) {
   <div>
     <app-todo [id]="todo.id" [title]="todo.title"></app-todo>
     <app-todo-actions [id]="todo.id" [title]="todo.title"></app-todo-actions>

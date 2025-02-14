@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoComponent } from './todo/todo.component';
 import { TodoModalComponent } from './todo-modal/todo-modal.component';
 import { TodoActionsComponent } from './todo-actions/todo-actions.component';
-import { todos } from '../mocks/todos.mocks';
+import { TodosService } from './todos.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,6 @@ import { todos } from '../mocks/todos.mocks';
 })
 export class AppComponent {
   title = 'todo-list-ui';
-  todos = todos;
+  todoService = inject(TodosService);
+  todos: Observable<any[]> = this.todoService.getTodos();
 }
